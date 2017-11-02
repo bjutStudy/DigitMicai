@@ -54,15 +54,7 @@ void Digit::print()
         std::cout<<std::endl;
     }
 }
-////获取小版块矩阵
-//void Digit::getMat(bool **mat)
-//{
-//    for(int i=0;i<w;i++){
-//        for(int j=0;j<l;j++){
-//            mat[i][j]=this->mat[i][j];
-//        }
-//    }
-//}
+
 //构造函数，初始化小版块
 Digit::Digit(int l, int w, bool mat[10][10],int num)
 {
