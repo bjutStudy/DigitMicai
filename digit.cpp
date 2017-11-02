@@ -1,9 +1,10 @@
+
 #include "digit.h"
 
 Digit::Digit()
 {
 }
-//»ñÈ¡Ð¡°ß¿éµÄ³ß´ç
+//èŽ·å–å°æ–‘å—çš„å°ºå¯¸
 int Digit::getLength()
 {
     return this->l;
@@ -13,18 +14,18 @@ int Digit::getWidth()
 {
     return this->w;
 }
-//»ñÈ¡Ð¡°æ¿éÖÐµãµÄÊýÁ¿
+//èŽ·å–å°ç‰ˆå—ä¸­ç‚¹çš„æ•°é‡
 int Digit::getNum()
 {
     return this->num;
 }
-//ÉèÖÃÐ¡°ß¿é×óÉÏ½ÇÔªËØµÄ×ø±ê
+//è®¾ç½®å°æ–‘å—å·¦ä¸Šè§’å…ƒç´ çš„åæ ‡
 void Digit::setLocation(int x, int y)
 {
     this->xp=x;
     this->yp=y;
 }
-//»ñÈ¡ÔªËØ×óÉÏ½Ç×ø±ê
+//èŽ·å–å…ƒç´ å·¦ä¸Šè§’åæ ‡
 int Digit::getLocationX()
 {
     return this->xp;
@@ -34,7 +35,7 @@ int Digit::getLocationY()
 {
     return this->yp;
 }
-//»ñÈ¡ÓëÉèÖÃÐ¡°ß¿éÑÕÉ«
+//èŽ·å–ä¸Žè®¾ç½®å°æ–‘å—é¢œè‰²
 QColor Digit::getColor()
 {
     return this->color;
@@ -55,7 +56,7 @@ void Digit::print()
     }
 }
 
-//¹¹Ôìº¯Êý£¬³õÊ¼»¯Ð¡°æ¿é
+//æž„é€ å‡½æ•°ï¼Œåˆå§‹åŒ–å°ç‰ˆå—
 Digit::Digit(int l, int w, bool mat[10][10],int num)
 {
     this->l=l;
