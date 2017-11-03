@@ -1,3 +1,8 @@
+/**
+ * @brief
+ *  该类主要用于将调用digitManger生成数码迷彩，然后将数码迷彩显示出来
+ * @author GaoYifan
+ */
 #ifndef WIDGET_H
 #define WIDGET_H
 

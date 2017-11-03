@@ -9,7 +9,7 @@ ColorItem::ColorItem(QWidget *parent) :
     this->color=QColor(0,0,0);
     rect.setRect(135,1,20,20);
 }
-
+//设置与获取比例
 void ColorItem::setData(int num, QColor color)
 {
     this->ui->lineEdit->setText(QString::number(num));

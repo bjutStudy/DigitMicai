@@ -7,16 +7,13 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
 }
-
+//添加颜色
 void Dialog::addItem(int r, QColor color)
 {
-    cout<<1<<endl;
     QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
     ui->listWidget->addItem(item);
-    cout<<2<<endl;
     ColorItem *coloritem=new ColorItem;
     coloritem->setData(r,color);
-    cout<<3<<endl;
     ui->listWidget->setItemWidget(item,coloritem);
     item->setSizeHint(QSize(0,30));
 }
@@ -32,12 +29,12 @@ Dialog::~Dialog()
 {
     delete ui;
 }
-
+//添加颜色按钮被点击
 void Dialog::on_pushButton_clicked()
 {
     addItem(1,QColor(0,0,0));
 }
-
+//确认按钮点击，从listWidget中提取颜色及比例，然后发送给父窗口
 void Dialog::on_pushButton_3_clicked()
 {
     vector<int>rls;
@@ -62,7 +59,7 @@ void Dialog::on_pushButton_2_clicked()
 }
 
 
-
+//--------------各类主题(海洋，森林，沙漠等)被选择事件------------
 void Dialog::on_radioButton_2_released()
 {
     if(ui->radioButton_2->isChecked()){
@@ -119,7 +116,9 @@ void Dialog::on_radioButton_5_released()
         addItem(1,QColor(75,75,75));
     }
 }
+//-------------------------------------------------------
 
+//由图片提出主题色
 void Dialog::on_pushButton_4_clicked()
 {
     QString qfilename=QFileDialog::getOpenFileName(this,tr("打开文件"),"","*.jpg;*.png",0);
