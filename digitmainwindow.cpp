@@ -66,12 +66,12 @@ void DigitMainWindow::setColors(vector<QColor> cls, vector<int> rls)
     childWidget->update();
     this->updateSizeShow();
 }
-
+//画图事件
 void DigitMainWindow::paintEvent(QPaintEvent *event)
 {
     childWidget->setGeometry(width()/10,height()/20,width()*4/5,height()*9/10);
 }
-
+//触发新建文件action
 void DigitMainWindow::on_actionNew_triggered()
 {
     sizedg=new setSizeDialog(this);
@@ -81,7 +81,7 @@ void DigitMainWindow::on_actionNew_triggered()
 
 
 
-
+//点击编辑的radioButton事件
 void DigitMainWindow::on_radioButton_released()
 {
     if(ui->radioButton->isChecked())
@@ -90,7 +90,7 @@ void DigitMainWindow::on_radioButton_released()
         childWidget->setHandleState(Widget::NORMAL);
 
 }
-
+//点击移动的radioButton事件
 void DigitMainWindow::on_radioButton_2_released()
 {
     if(ui->radioButton_2->isChecked())
@@ -98,7 +98,7 @@ void DigitMainWindow::on_radioButton_2_released()
     else
         childWidget->setHandleState(Widget::NORMAL);
 }
-
+//储存文件
 void DigitMainWindow::on_actionSave_triggered()
 {
     QString qfilename=QFileDialog::getSaveFileName(this,tr("保存文件"),"defalut.dmc","*.dmc",0);
@@ -112,16 +112,19 @@ void DigitMainWindow::on_actionSave_triggered()
         fileHandle->save();
     }
 }
-
+//打开文件
 void DigitMainWindow::on_actionOpen_triggered()
 {
     QString qfilename=QFileDialog::getOpenFileName(this,tr("打开文件"),"default.dmc","*.dmc",0);
     if(!qfilename.isNull()){
+
         string filename=qfilename.toStdString();
         cout<<filename<<endl;
+        //使用filehandle将数据读出
         fileHandle=new FileHandle(filename);
         fileHandle->read();
         DigitMananger dm=fileHandle->getDigitManager();
+        //设置childWidget显示数据
         childWidget->dm=dm;
         fileHandle->getSize(l,w,h);
         childWidget->setSize(l,w,h);

@@ -1,3 +1,10 @@
+/**
+ * @brief
+ * 该类实现数码迷彩的生成算法，安装给出的颜色，数码迷彩的生成区域，
+ *生成数码迷彩，并可以通过数码迷彩小版块的位置查询到生成的数码迷彩。
+ * @author GaoYifan
+ */
+
 #ifndef DIGITMANANGER_H
 #define DIGITMANANGER_H
 #include<vector>

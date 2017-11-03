@@ -15,12 +15,12 @@ setSizeDialog::~setSizeDialog()
 {
     delete ui;
 }
-
+//点击取消按钮
 void setSizeDialog::on_pushButton_2_clicked()
 {
     this->close();
 }
-
+//点击发送按钮
 void setSizeDialog::on_pushButton_clicked()
 {
     int h=ui->hei_et->text().toInt();

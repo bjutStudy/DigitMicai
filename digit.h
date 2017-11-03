@@ -1,11 +1,14 @@
+/**
+ * @brief
+ *  工具类，记录要画在画布上的小版块的相关属性
+ *  该类在digitmanager中被调用
+ * @author GaoYifan
+ */
 #ifndef DIGIT_H
 #define DIGIT_H
 #include<QColor>
 #include<iostream>
 
-/*
-    工具类，记录要画在画布上的小版块的相关属性
-*/
 class Digit
 {
 private:
